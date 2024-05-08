@@ -119,6 +119,9 @@ def simple_embedding(data: pd.DataFrame, w2v_stanford: KeyedVectors, w2v_local: 
     :param agg: aggregation method to use for the embeddings. Either 'sum' or 'mean', default is 'sum'
     :return: data with embeddings
     """
+    # creating a local copy of the data
+    data = data.copy()
+
     print('--- Creating simple embeddings for the data ---')
 
     def stanford_embedding(sen):
@@ -152,4 +155,42 @@ def simple_embedding(data: pd.DataFrame, w2v_stanford: KeyedVectors, w2v_local: 
     else:
         raise ValueError('Invalid aggregation method. Please use either "sum" or "mean"')
     print('--- Simple embeddings created ---\n')
+    return data
+
+def stacked_embedding(data:pd.DataFrame, w2v_stanford: KeyedVectors, w2v_local: Word2Vec,
+                     agg: str = 'sum') -> pd.DataFrame:
+    """
+    Used to create stacked embeddings for the sentences in the data.
+    :param data: data to create embeddings for
+    :param w2v_stanford: stanford word2vec model
+    :param w2v_local: local word2vec model
+    :param agg: aggregation method to use for the embeddings. Either 'sum' or 'mean', default is 'sum'
+    :return: data with embeddings
+    """
+    # creating a copy of the data
+    data = data.copy()
+
+    print('--- Creating Stacked embedding for the Data ---')
+
+    data['title_len'] = data['title'].apply(lambda x: len(x.split()))
+    std_len = data['title_len'].std()
+    max_len = data['title_len'].max()
+    emb_stack_size = np.ceil(max_len + 2*std_len).astype(np.int64)  # for an approximate 95% coverage
+
+    def create_embedding(sen):
+        emb_stack = np.zeros((emb_stack_size, w2v_local.vector_size))
+        for i, word in enumerate(sen.split()):
+            if i >= emb_stack_size:
+                break
+            word_emb = np.zeros(w2v_local.vector_size)
+            if word.lower() in w2v_stanford:
+                word_emb += w2v_stanford[word.lower()]
+            if word.lower() in w2v_local.wv:
+                word_emb += w2v_local.wv[word.lower()]
+            if agg == 'mean':
+                word_emb /= 2
+            emb_stack[i] = word_emb
+        return emb_stack
+
+    data['stacked_embedding'] = data['title'].apply(create_embedding)
     return data

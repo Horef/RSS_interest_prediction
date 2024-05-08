@@ -43,8 +43,8 @@ def evaluate_model(ground_truth: [int], predictions: [int]) -> (float, float, fl
     :return: accuracy, precision, recall of the model.
     """
     accuracy = accuracy_score(ground_truth, predictions)
-    precision = precision_score(ground_truth, predictions)
-    recall = recall_score(ground_truth, predictions)
+    precision = precision_score(ground_truth, predictions, zero_division=0)
+    recall = recall_score(ground_truth, predictions, zero_division=0)
 
     return accuracy, precision, recall
 
@@ -90,22 +90,22 @@ def cross_validation(data, emb_column, models, model_names, k=5):
 
         print(f'--- {model_name} model trained and tested ---')
         # Plotting box plots for each of the metrics, on the same plot
-        plot_metrics(accuracies, precisions, recalls, model_name)
+        plot_metrics(accuracies, precisions, recalls, model_name, emb_name=emb_column)
 
-def plot_metrics(accuracies, precisions, recalls, model_name):
+def plot_metrics(accuracies, precisions, recalls, model_name, emb_name):
     """
     Plot the metrics for the models.
     :param accuracies: the accuracies.
     :param precisions: the precisions.
     :param recalls: the recalls.
     :param model_name: the names of the model.
+    :param emb_name: name of the embedding used
     """
     labels = ['Accuracy', 'Precision', 'Recall']
 
     plt.boxplot([accuracies, precisions, recalls], labels=labels)
     plt.title(f'Model Metrics for {model_name}')
-    plt.legend()
     plt.xlabel('Metrics')
     plt.ylabel('Value')
     plt.show()
-    plt.savefig(f'plots/{model_name}_metrics.png')
+    plt.savefig(f'plots/{model_name}_w_{emb_name}_metrics.png')

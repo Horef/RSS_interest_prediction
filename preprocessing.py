@@ -120,6 +120,9 @@ def fold_split(data: pd.DataFrame, folds: int = 5) -> [pd.DataFrame]:
     :param folds: number of folds
     :return: list of dataframes
     """
+    # creating a copy of the data
+    data = data.copy()
+
     # Because we want to keep the same representation of the interest column in both train and test
     # we need to split the data into positive and negative data and then split each separately
     positive_data = data[data['interest'] == 1]
