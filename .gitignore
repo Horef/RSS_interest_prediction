@@ -1,0 +1,3 @@
+# ignore all of the saved models as they take too much space
+*.pkl
+*.npy
