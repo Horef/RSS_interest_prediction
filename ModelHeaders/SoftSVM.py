@@ -3,8 +3,10 @@ from constants import SEED
 
 # Soft SVM model implementation
 class SoftSVM:
-    def __init__(self):
-        self.model = SVC(class_weight='balanced', probability=True, random_state=SEED)
+    def __init__(self, C=1.0, kernel='rbf', degree=3, gamma='scale', coef0=0.0, class_weight='balanced',
+                 probability=True, random_state=SEED):
+        self.model = SVC(kernel=kernel, C=C, degree=degree, gamma=gamma, coef0=coef0, class_weight=class_weight,
+                         probability=probability, random_state=random_state)
 
     def fit(self, X, y):
         self.model.fit(X, y)

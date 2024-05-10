@@ -49,18 +49,18 @@ def evaluate_model(ground_truth: [int], predictions: [int]) -> (float, float, fl
     return accuracy, precision, recall
 
 
-def cross_validation(data, emb_column, models, model_names, k=5):
+def cross_validation(data, emb_column, models, model_names, folds=5):
     """
     Perform cross validation on the data using the models.
     :param data: the data to use.
     :param emb_column: the column to use for the embeddings.
     :param models: the models to use.
     :param model_names: the names of the models.
-    :param k: the number of folds.
+    :param folds: the number of folds.
     :return: the results of the cross validation.
     """
 
-    folded_data = pp.fold_split(data, k)
+    folded_data = pp.fold_split(data, folds)
 
     for (model, model_name) in zip(models, model_names):
         accuracies = []
@@ -68,8 +68,8 @@ def cross_validation(data, emb_column, models, model_names, k=5):
         recalls = []
 
         print(f'--- Training the {model_name} model ---')
-        for fold in range(k):
-            train_data = pd.concat([folded_data[i] for i in range(k) if i != fold])
+        for fold in range(folds):
+            train_data = pd.concat([folded_data[i] for i in range(folds) if i != fold])
             test_data = folded_data[fold]
 
             # --- creating the train and test data for the model ---
@@ -103,9 +103,10 @@ def plot_metrics(accuracies, precisions, recalls, model_name, emb_name):
     """
     labels = ['Accuracy', 'Precision', 'Recall']
 
+    # initializing a new plot
+    plt.figure()
     plt.boxplot([accuracies, precisions, recalls], labels=labels)
     plt.title(f'Model Metrics for {model_name}')
     plt.xlabel('Metrics')
     plt.ylabel('Value')
-    plt.show()
     plt.savefig(f'plots/{model_name}_w_{emb_name}_metrics.png')

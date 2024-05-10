@@ -6,7 +6,8 @@ import embedding as emb
 from constants import TRAIN_PATH
 from ModelHeaders.LogisticLinearRegression import LogisticLinearRegression
 from ModelHeaders.SoftSVM import SoftSVM
-from ModelHeaders.KNN import KNN
+from ModelHeaders.Baseline import Baseline
+from ModelHeaders.BaggingModule import BaggingModule
 from models import test_model, cross_validation
 
 
@@ -34,6 +35,9 @@ if __name__ == '__main__':
     stacked_data_emb = emb.stacked_embedding(data, w2v_stanford, w2v_local, agg='mean')
 
     # --- training and testing different models ---
-    models_classes = [LogisticLinearRegression(), SoftSVM(), KNN()]
-    models_names = ['Logistic Linear Regression', 'Soft SVM', 'KNN']
-    cross_validation(simple_data_emb, 'simple_embedding', models_classes, models_names, k=5)
+    models_classes = [LogisticLinearRegression(), SoftSVM(), SoftSVM(kernel='poly'), Baseline(),
+                      BaggingModule(LogisticLinearRegression, bag_size=50),
+                      BaggingModule(SoftSVM, bag_size=50, kernel='poly')]
+    models_names = ['Logistic Linear Regression', 'Soft SVM rbf', 'Soft SVM poly', 'Baseline',
+                    'Bagging (bag 50) Logistic Linear Regression', 'Bagging (bag 50) Soft SVM poly']
+    cross_validation(simple_data_emb, 'simple_embedding', models_classes, models_names, folds=5)
