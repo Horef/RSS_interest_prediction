@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>736700812.06592798</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>20600</integer>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteAppleScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>property file_path : nullon run	set file_path to "/Users/sergiyhoref/Programming/RSS_Interest_Tagger/article_train.txt"	set file_path to POSIX path of file_path		set interest to 0		tell application "NetNewsWire"		set app_props to get properties		(*
+		# For debugging purposes
+		set app_accounts to get accounts of application "NetNewsWire"
+		log "App Accounts"
+		log app_accounts
+		
+		# Notice that only the feeds that are not in folders can be found
+		set app_webFeeds to get webFeeds of application "NetNewsWire"
+		log "App Web-Feeds"
+		log app_webFeeds
+		
+		set exs_accounts to accounts of app_props
+		log exs_accounts
+		*)				set current_article to current article of app_props		set article_title to title of current_article		log "Title of current article"		log article_title				# to get the full set of properties			# set article_properties to get properties of current_article			end tell		set processed_title to replace_chars(article_title, ",", "")	addTextToFile(processed_title &amp; "," &amp; interest)	end runon addTextToFile(text_app)	log text_app	do shell script "echo " &amp; quoted form of text_app &amp; " &gt;&gt; " &amp; quoted form of file_path	log "Successfully Added"end addTextToFile# Function to replace all given chars in a given string# Source - http://www.macosxautomation.com/applescript/sbrt/sbrt-06.html# Usage - replace_chars(message_string, "string_to_be_replaced", "replacement_string")on replace_chars(this_text, search_string, replacement_string)	set AppleScript's text item delimiters to the search_string	set the item_list to every text item of this_text	set AppleScript's text item delimiters to the replacement_string	set this_text to the item_list as string	set AppleScript's text item delimiters to ""	return this_textend replace_chars</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>20601</integer>
+						<key>MacroActionType</key>
+						<string>Notification</string>
+						<key>SoundName</key>
+						<string></string>
+						<key>Subtitle</key>
+						<string></string>
+						<key>Text</key>
+						<string>Negative Train value successfully added.</string>
+						<key>Title</key>
+						<string>%ExecutingMacro%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>736700989.57466495</real>
+				<key>CustomIconData</key>
+				<string>KMEC=Rounded=KMCOLOR:255,255,255,255=👎=86=2=4=1=KMCOLOR:0,0,0,255</string>
+				<key>ModificationDate</key>
+				<real>736841233.52245402</real>
+				<key>Name</key>
+				<string>Add Negative Train</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>4A83DBBC-937A-4A79-8E78-F48E9F3CD94E</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>RSS Interest Prediction</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.ranchero.NetNewsWire-Evergreen</string>
+					<key>Name</key>
+					<string>NetNewsWire</string>
+					<key>NewFile</key>
+					<string>/Applications/NetNewsWire.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>ToggleMacroUID</key>
+		<string>2448218C-3E7C-428F-B875-1D22105A1D38</string>
+		<key>UID</key>
+		<string>113E0454-EEEB-4C23-BDB1-6A71B6A1582A</string>
+	</dict>
+</array>
+</plist>
