@@ -2,10 +2,13 @@ from ModelHeaders import *
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import pickle
+import os
 
 import preprocessing as pp
 from sklearn.metrics import accuracy_score, precision_score, recall_score
 from constants import LR_BIAS_THRESHOLD
+
 
 def test_model(model, X_train, y_train, X_test, y_test) -> (float, float, float):
     """
@@ -34,6 +37,21 @@ def test_model(model, X_train, y_train, X_test, y_test) -> (float, float, float)
     else:
         print('Biased predictions:')
         return evaluate_model(y_test, bias_predictions)
+
+
+def prepare_performance_model(model, data, emb_column):
+    """
+    Used to prepare the model for performance use.
+    :param model: model to prepare.
+    :param data: data to use.
+    :param emb_column: column to use for the embeddings.
+    :return: the model.
+    """
+    X_train = np.stack(data[emb_column].values, axis=0)
+    y_train = data['interest'].to_numpy(dtype=np.int64)
+
+    model.fit(X_train, y_train)
+    return model
 
 def evaluate_model(ground_truth: [int], predictions: [int]) -> (float, float, float):
     """
@@ -92,6 +110,7 @@ def cross_validation(data, emb_column, models, model_names, folds=5):
         # Plotting box plots for each of the metrics, on the same plot
         plot_metrics(accuracies, precisions, recalls, model_name, emb_name=emb_column)
 
+
 def plot_metrics(accuracies, precisions, recalls, model_name, emb_name):
     """
     Plot the metrics for the models.
@@ -110,3 +129,45 @@ def plot_metrics(accuracies, precisions, recalls, model_name, emb_name):
     plt.xlabel('Metrics')
     plt.ylabel('Value')
     plt.savefig(f'plots/{model_name}_w_{emb_name}_metrics.png')
+
+
+def save_model(model, model_name):
+    """
+    Save the model to a file.
+    :param model: the model to save.
+    :param model_name: the name of the model.
+    """
+    with open(f'models/{model_name}.pkl', 'wb') as f:
+        pickle.dump(model, f)
+
+
+def save_models(models, model_names):
+    """
+    Save the models to files.
+    :param models: the models to save.
+    :param model_names: the names of the models.
+    """
+    for model, model_name in zip(models, model_names):
+        save_model(model, model_name)
+
+
+def load_model(model_name):
+    """
+    Load the model from a file.
+    :param model_name: the name of the model.
+    :return: the model.
+    """
+    # joining the path to the model with the full path
+    model_path = os.path.join(os.path.dirname(__file__), f'models/{model_name}.pkl')
+
+    with open(model_path, 'rb') as f:
+        return pickle.load(f)
+
+
+def load_models(model_names):
+    """
+    Load the models from files.
+    :param model_names: the names of the models.
+    :return: the models.
+    """
+    return [load_model(model_name) for model_name in model_names]

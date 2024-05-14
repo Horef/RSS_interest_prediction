@@ -2,6 +2,7 @@ from constants import BACKUP_PATH, SEED
 import pandas as pd
 import os
 import pickle
+from torch.utils.data import Dataset
 
 
 def load_train_data(data_path: str, tagged: bool = True) -> pd.DataFrame:
@@ -66,13 +67,15 @@ def read_file(file_path: str, tagged: bool = True) -> pd.DataFrame:
     return pd.read_csv(file_path, header=None, names=['title'])
 
 
-def clean_data(data: pd.DataFrame) -> pd.DataFrame:
+def clean_data(data: pd.DataFrame, printouts: bool = True) -> pd.DataFrame:
     """
     Clean the data by removing any rows with missing values, and adding spaces around every special character
     :param data: data to clean
+    :param printouts: whether to print out the cleaning steps
     :return: cleaned data
     """
-    print('--- Cleaning data ---')
+    if printouts:
+        print('--- Cleaning data ---')
     data.dropna(inplace=True)
 
     # adding spaces around special characters
@@ -84,8 +87,12 @@ def clean_data(data: pd.DataFrame) -> pd.DataFrame:
     # removing duplicate rows if any
     data.drop_duplicates(subset=['title'], keep='last', inplace=True)
 
-    print('Data cleaned')
-    print('--- Data cleaned ---\n')
+    # setting all words to lowercase
+    data['title'] = data['title'].str.lower()
+
+    if printouts:
+        print('Data cleaned')
+        print('--- Data cleaned ---\n')
     return data
 
 
@@ -138,3 +145,14 @@ def fold_split(data: pd.DataFrame, folds: int = 5) -> [pd.DataFrame]:
         folded_data.append(pd.concat([positive_fold, negative_fold]))
 
     return folded_data
+
+class TextDataset(Dataset):
+    def __init__(self, data: pd.DataFrame, emb_column: str):
+        self.data = data
+        self.emb_column = emb_column
+
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self, idx):
+        return self.data.iloc[idx][self.emb_column], self.data.iloc[idx]['interest']

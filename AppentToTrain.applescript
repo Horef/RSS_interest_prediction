@@ -29,17 +29,12 @@ on run
 		log article_title
 		
 		# to get the full set of properties	
-		set article_properties to get properties of current_article
-		#log article_properties
-		
-		set article_contents to html of current_article
-		log "Article Contents"
-		log article_contents
+		# set article_properties to get properties of current_article
 		
 	end tell
 	
-	# set processed_title to replace_chars(article_title, ",", "")
-	# addTextToFile(processed_title & "," & interest)
+	set processed_title to replace_chars(article_title, ",", "")
+	addTextToFile(processed_title & "," & interest)
 	
 end run
 
