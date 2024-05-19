@@ -11,6 +11,8 @@ from ModelHeaders.BaggingModule import BaggingModule
 from ModelHeaders.FeedForwardNetwork import FFN
 from models import test_model, test_folded_model, cross_validation, prepare_performance_model, save_model
 from statistics import func_ci
+from GPT.GeneticParameterTuner import GPT
+from GPT.fitness_wrappers import model_fitness_wrapper
 
 if __name__ == '__main__':
     print('--- Starting the main script ---')
@@ -59,10 +61,21 @@ if __name__ == '__main__':
     # single test
     model = FFN()
     #test_folded_model(model, simple_data_emb, 'simple_embedding')
-    func_ci(test_model, model=model, data=simple_data_emb, emb_column='simple_embedding', use_torch=True, n=10, alpha=0.95,
-            print_results=True, plot_result=True)
-    func_ci(test_folded_model, model=model, data=simple_data_emb, emb_column='simple_embedding', n=10, alpha=0.95,
-            print_results=True, plot_result=True)
+    # func_ci(test_model, model=model, data=simple_data_emb, emb_column='simple_embedding', use_torch=True, n=10, alpha=0.95,
+    #         print_results=True, plot_result=True)
+    # func_ci(test_folded_model, model=model, data=simple_data_emb, emb_column='simple_embedding', n=10, alpha=0.95,
+    #         print_results=True, plot_result=True)
+
+    # --- tuning the hyperparameters ---
+    fitness_function = model_fitness_wrapper(model=FFN(), func=test_folded_model,
+                                             func_arguments={'data': simple_data_emb, 'emb_column': 'simple_embedding'})
+    gpt = GPT(fitness_function=fitness_function, parameter_types=model.model_hyperparameter_types(),
+              projections=model.model_hyperparameter_projections(),
+              initial_set=model.model_hyperparameter_defaults(),
+              mutation_probability=0.3, num_generations=10, num_agents=24, print_progress=True)
+
+    best_parameters = gpt.get_best_agent()
+    print('Best parameters:', best_parameters)
 
     # # --- saving the best model ---
     # print('--- Saving the best model ---')

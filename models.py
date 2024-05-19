@@ -69,7 +69,7 @@ def test_model(model, data, emb_column, use_torch: bool = False, biased_pred: bo
     return accuracy, precision, recall
 
 
-def test_folded_model(model, data, emb_column, folds=5, printouts: bool = False) -> (float, float, float):
+def test_folded_model(model, data, emb_column, folds=5, metrics: str = 'f1', printouts: bool = False) -> tuple or float:
     """
     This function makes sense only for torch models, therefore is it not backward compatible.
     Used to train the given model on the data, while the training is done on the folds.
@@ -77,7 +77,8 @@ def test_folded_model(model, data, emb_column, folds=5, printouts: bool = False)
     :param data: data to use.
     :param emb_column: column to use for the embeddings.
     :param folds: number of folds.
-    :return: accuracy, precision, recall of the model.
+    :param metrics: which metrics to use for evaluation. Is either 'accuracy', 'precision', 'recall' or 'f1', or 'all'.
+    :return: accuracy, precision, recall of the model. Or an individual metric if specified.
     """
 
     train_data, test_data = pp.split_data(data, 0.8)
@@ -97,11 +98,20 @@ def test_folded_model(model, data, emb_column, folds=5, printouts: bool = False)
     predictions = model(to_device(torch.tensor(X_test, dtype=torch.float32))).detach().cpu().numpy()
     predictions = model.output_to_labels(predictions)
 
-    accuracy, precision, recall, _ = evaluate_model(y_test, predictions)
+    accuracy, precision, recall, f1 = evaluate_model(y_test, predictions)
     if printouts:
         print(f'Accuracy: {accuracy:.2f},\nPrecision: {precision:.2f},\nRecall: {recall:.2f}')
 
-    return accuracy, precision, recall
+    if metrics == 'accuracy':
+        return accuracy
+    elif metrics == 'precision':
+        return precision
+    elif metrics == 'recall':
+        return recall
+    elif metrics == 'f1':
+        return f1
+
+    return accuracy, precision, recall, f1
 
 def prepare_performance_model(model, data, emb_column):
     """

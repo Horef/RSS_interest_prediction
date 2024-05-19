@@ -67,3 +67,25 @@ class FFN(nn.Module):
             return np.concatenate(labels.astype(int), axis=None)
         else:
             return torch.argmax(output, dim=1)
+
+
+    def model_hyperparameter_types(self):
+        """
+        Used to get the model parameters
+        :return: dictionary of form: {parameter_name: parameter_type}
+        """
+        return {'hidden_size': 'int'}
+
+    def model_hyperparameter_projections(self):
+        """
+        Used to get the projection upon allowed values for model parameters
+        :return: dictionary of form: {parameter_name: projection_function}
+        """
+        return {'hidden_size': lambda x: min(max(50, x), 600)}
+
+    def model_hyperparameter_defaults(self):
+        """
+        Used to get the default values for model parameters
+        :return: dictionary of form: {parameter_name: default_value}
+        """
+        return {'hidden_size': 300}
