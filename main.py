@@ -8,7 +8,9 @@ from ModelHeaders.LogisticLinearRegression import LogisticLinearRegression
 from ModelHeaders.SoftSVM import SoftSVM
 from ModelHeaders.Baseline import Baseline
 from ModelHeaders.BaggingModule import BaggingModule
-from models import test_model, cross_validation, prepare_performance_model, save_model
+from ModelHeaders.FeedForwardNetwork import FFN
+from models import test_model, test_folded_model, cross_validation, prepare_performance_model, save_model
+from statistics import func_ci
 
 if __name__ == '__main__':
     print('--- Starting the main script ---')
@@ -33,21 +35,34 @@ if __name__ == '__main__':
     stacked_data_emb = emb.stacked_embedding(data, w2v_stanford, w2v_local, agg='mean')
 
     bag_size = int(0.15 * len(data))
-    # --- training and testing different models ---
-    models_classes = [LogisticLinearRegression(), SoftSVM(), SoftSVM(kernel='poly'), Baseline(),
-                      BaggingModule(LogisticLinearRegression, bag_size=50),
-                      BaggingModule(SoftSVM, bag_size=50, kernel='poly'),
-                      BaggingModule(LogisticLinearRegression, bag_size=bag_size),
-                      BaggingModule(SoftSVM, bag_size=bag_size, kernel='poly'),
-                      BaggingModule(SoftSVM, bag_size=bag_size),
-                      BaggingModule(SoftSVM, bag_size=50)]
-    models_names = ['Logistic Linear Regression', 'Soft SVM rbf', 'Soft SVM poly', 'Baseline',
-                    'Bagging (bag 50) Logistic Linear Regression', 'Bagging (bag 50) Soft SVM poly',
-                    f'Bagging (bag {bag_size}) Logistic Linear Regression',
-                    f'Bagging (bag {bag_size}) Soft SVM poly',
-                    f'Bagging (bag {bag_size}) Soft SVM rbf',
-                    'Bagging (bag 50) Soft SVM rbf']
-    cross_validation(simple_data_emb, 'simple_embedding', models_classes, models_names, folds=5)
+    # # --- training and testing different models ---
+    # models_classes = [LogisticLinearRegression(), SoftSVM(), SoftSVM(kernel='poly'), Baseline(),
+    #                   BaggingModule(LogisticLinearRegression, bag_size=50),
+    #                   BaggingModule(SoftSVM, bag_size=50, kernel='poly'),
+    #                   BaggingModule(LogisticLinearRegression, bag_size=bag_size),
+    #                   BaggingModule(SoftSVM, bag_size=bag_size, kernel='poly'),
+    #                   BaggingModule(SoftSVM, bag_size=bag_size),
+    #                   BaggingModule(SoftSVM, bag_size=50)]
+    # models_names = ['Logistic Linear Regression', 'Soft SVM rbf', 'Soft SVM poly', 'Baseline',
+    #                 'Bagging (bag 50) Logistic Linear Regression', 'Bagging (bag 50) Soft SVM poly',
+    #                 f'Bagging (bag {bag_size}) Logistic Linear Regression',
+    #                 f'Bagging (bag {bag_size}) Soft SVM poly',
+    #                 f'Bagging (bag {bag_size}) Soft SVM rbf',
+    #                 'Bagging (bag 50) Soft SVM rbf']
+    # cross_validation(simple_data_emb, 'simple_embedding', models_classes, models_names, folds=5)
+
+    # --- training and testing torch based models ---
+    # models_classes = [FFN()]
+    # models_names = ['Feed Forward Neural Network']
+    # cross_validation(simple_data_emb, 'simple_embedding', models_classes, models_names, use_torch=True, folds=5)
+
+    # single test
+    model = FFN()
+    #test_folded_model(model, simple_data_emb, 'simple_embedding')
+    func_ci(test_model, model=model, data=simple_data_emb, emb_column='simple_embedding', use_torch=True, n=10, alpha=0.95,
+            print_results=True, plot_result=True)
+    func_ci(test_folded_model, model=model, data=simple_data_emb, emb_column='simple_embedding', n=10, alpha=0.95,
+            print_results=True, plot_result=True)
 
     # # --- saving the best model ---
     # print('--- Saving the best model ---')

@@ -5,3 +5,7 @@ STANFORD_W2V_PATH: str = 'w2v_stanford.pkl'
 LOCAL_W2V_PATH: str = 'w2v_local.pkl'
 SEED: int = 7
 LR_BIAS_THRESHOLD: float = 0.3
+BATCH_SIZE: int = 16
+NUM_EPOCHS: int = 50
+MAX_EPOCHS: int = 300
+AUTO_LOSS_THRESHOLD: int = 20  # how much less the loss should be to end the training early

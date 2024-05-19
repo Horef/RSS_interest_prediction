@@ -1,3 +1,5 @@
+import torch
+
 from constants import BACKUP_PATH, SEED
 import pandas as pd
 import os
@@ -96,11 +98,12 @@ def clean_data(data: pd.DataFrame, printouts: bool = True) -> pd.DataFrame:
     return data
 
 
-def split_data(data: pd.DataFrame, train_percent: float = 0.8) -> (pd.DataFrame, pd.DataFrame):
+def split_data(data: pd.DataFrame, train_percent: float = 0.8, shuffle: bool = True) -> (pd.DataFrame, pd.DataFrame):
     """
     Split the data into train and test such that the representation of the interest column is the same in both
     :param data: data to split
     :param train_percent: percentage of data to be used for training (0 < train_percent < 1)
+    :param shuffle: whether to shuffle the data after splitting
     :return: train and test data
     """
     # Because we want to keep the same representation of the interest column in both train and test
@@ -117,6 +120,11 @@ def split_data(data: pd.DataFrame, train_percent: float = 0.8) -> (pd.DataFrame,
     # Concatenating the data
     train_data = pd.concat([positive_train, negative_train])
     test_data = pd.concat([positive_test, negative_test])
+
+    if shuffle:
+        train_data = train_data.sample(frac=1, random_state=SEED).reset_index(drop=True)
+        test_data = test_data.sample(frac=1, random_state=SEED).reset_index(drop=True)
+
     return train_data, test_data
 
 
@@ -155,4 +163,5 @@ class TextDataset(Dataset):
         return len(self.data)
 
     def __getitem__(self, idx):
-        return self.data.iloc[idx][self.emb_column], self.data.iloc[idx]['interest']
+        return (torch.tensor(self.data.iloc[idx][self.emb_column], dtype=torch.float32),
+                torch.tensor(self.data.iloc[idx]['interest'], dtype=torch.float32))

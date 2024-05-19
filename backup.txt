@@ -14,7 +14,7 @@ A Rosetta Stone for Mathematics | Quanta Magazine - Kevin Hartnett | In 1940 And
 Prove that an algebraic link that has exactly one negative sign in its Conway notation has an almost alternating projection,1
 [R] academic survey about diversity in AI development/research teams,0
 [D] Get paid for peer reviews on ResearchHub,1
-[D] NER for large text data,0
+[D] NER for large text data,1
 The best AI tools for everyday use and productivity (that are actually free to use),0
 Microsoft X OpenAI: Unlock the potential of Generative AI for your startup!,0
 Enhance Your Writing Skills with Blainy: Your Ultimate Writing Companion,0
@@ -29,7 +29,7 @@ AIGuys Monthly Newsletter. AI Breakthroughs SOTA AI Paper Review and AI talks fr
 on rediscovering math,0
 math competitions for people after high school this summer?,0
 [R] Why can Llama-3 work with 32K context if it only had 8K context length?,0
-Hunter-Gatherer-Agriculture,0
+Hunter-Gatherer-Agriculture,1
 Where to get mentors in game theory?,0
 Image generation/editing service (ie. background removal) one stop service?,0
 A.I Homer Simpson Spongebob and Mickey Mouse sing Frozen,0
@@ -41,9 +41,9 @@ Could AI ever be used to predict natural disasters and help people get ready?,0
 [D] LLM use case for QA and reasoning.,0
 Entry level jobs in AI,0
 How Large Language Models play video games [D],1
-Looking for browser options,1
+Looking for browser options,0
 [Project] An LLM-Powered Web App for SEC Filing Insights,1
-[R] Time-series predictive ML validation set,0
+[R] Time-series predictive ML validation set,1
 Seeking 3-6 month curriculum to learn AI,0
 Finding a laplace inverse of a function,0
 Question about differential geometry & measure theory,0
@@ -53,16 +53,16 @@ Blackoboard,0
 Pobability distributions that evolve,1
 Shanghai Puts Fields Medal Winner in Charge of New Math Center,0
 A Multi-Agent game where LLMs must trick each other as humans until one gets caught,0
-Standard Deviation Formula CX II-T not found,0
+Standard Deviation Formula CX II-T not found,1
 [D] Simple Questions Thread,0
 [R] Postdoc developing medical machine learning in patient with blood cancer,0
-[D] Is there a more systematic way of choosing the layers or how deep the architecture goes when creating a neural network?,0
+[D] Is there a more systematic way of choosing the layers or how deep the architecture goes when creating a neural network?,1
 [D] Where does the real value of a data scientist come from?,0
 [D] NVIDIA GPU Benchmarks & Comparison,0
 [R] A Careful Examination of Large Language Model Performance on Grade School Arithmetic,1
 [D] The "it" in AI models is really just the dataset?,0
-HOW TO: fourier transform of a half sine wave,0
-Does Cantor's diagonalization show that there is no one-to-one correspondence between the natural numbers to the natural numbers?,0
+HOW TO: fourier transform of a half sine wave,1
+Does Cantor's diagonalization show that there is no one-to-one correspondence between the natural numbers to the natural numbers?,1
 A Daily chronicle of AI Innovations May 06 2024: 🤖 DrEureka can automate robot training using LLMs 🚀 Free AI model rivals GPT-4 in language model evaluation 📰 X introduces Stories feature powered by Grok AI 🔒 Privacy complaint filed against OpenAI and more AI Tools and Jobs Opportunities❗,1
 They taught AI to edit genes with CRISPR. It knocked out 4 skin cancer genes.,1
 What do you think of the potential of Cellular Automata to derive QED?,1
@@ -80,9 +80,9 @@ Simple interactive learning (GPT4-Turbo) 👾✨,0
 Using the Phi-3-Mini to do Q&A on YouTube Videos,1
 How do people make AI adult content?,0
 NLTK vs spaCy: Choosing the Right NLP Toolkit for You,1
-Preserving Privacy in AI: Advanced Strategies and Solutions | PVML,0
+Preserving Privacy in AI: Advanced Strategies and Solutions | PVML,1
 Transforming Businesses with Advanced Conversational AI Solutions,0
-[D] How does fast inference work with state of the art LLMs?,0
+[D] How does fast inference work with state of the art LLMs?,1
 I discovered a Richard Simmons channel that I'm almost certain is totally AI generated but it's fooling major media outlets. Can I get a sanity check?,0
 Pi ai - threads question.,0
 I need an AI that watches my phone screen and remembers what it sees,0
@@ -107,7 +107,7 @@ AI Tool to Change the Voice of a Recording with Cloned Voice,0
 looking for guidance on how to prompt image generation so that it can re-use components from another image,0
 How much algebra do logic PhD students need to know?,0
 MENTAL HEALTH AI SOFTWARE,0
-The Microsoft-Phi-3-Mini is a mighty small language model,0
+The Microsoft-Phi-3-Mini is a mighty small language model,1
 Math after college,0
 A chance for all of us: contribute to our open source project so we could potentially win the robinhood contest and a chance of winning 1 million + dollars in funding!,0
 Who will be 99% replaced by ai and robots first from this 2 cases? Answer should be about all professions in case.,0
@@ -119,7 +119,7 @@ How can I manipulate this function?,0
 NVIDIA AI Open-Sources ‘NeMo-Aligner’: Transforming Large Language Model Alignment with Efficient Reinforcement Learning,1
 Predibase Researchers Present a Technical Report of 310 Fine-tuned LLMs that Rival GPT-4,1
 Prometheus 2: An Open Source Language Model that Closely Mirrors Human and GPT-4 Judgements in Evaluating Other Language Models,1
-[D] Stack Overflow partnership with OPEN AI,0
+[D] Stack Overflow partnership with OPEN AI,1
 [p] Need help with project ideas,0
 [D] What is the word for “doxing” an LLM (calling out that it is not Human)?,0
 Is there a way to use LIama for work?,0
@@ -147,8 +147,8 @@ First “artist” review 👾✨ (GPT4 & Dalle 3),0
 Academic Misconduct: Error-riddled feedback on a university assignment; was it AI generated???,0
 The Semantic Layer Movement: The Rise & Current State,1
 Bored Riot Cops Break Up Calculus Class | The Onion,0
-[P] YARI - Yet Another RAG Implementation. Hybrid context retrieval,0
-Power of two bit group size names,0
+[P] YARI - Yet Another RAG Implementation. Hybrid context retrieval,1
+Power of two bit group size names,1
 Our week long Global Hackathon & Offline AI Workshop event in Taipei,1
 Question about definition of Function in my Exam,0
 Does LLM quality only depend on training data quality size and parameters?,0
@@ -162,7 +162,7 @@ Do you have to factor before finding an oblique asymptote?,0
 Maths comntests for amateurs,0
 Double differentiation,0
 Do you know similar math games like Everest by Mwageringel ?,0
-Talk Track Generation for Slide Decks,0
+Talk Track Generation for Slide Decks,1
 [P] Identify toxic underwater air bubbles lurking in the substrate with aquatic ultrasonic scans via Arduino Nano ESP32 (Ridge classification) and assess water pollution based on chemical (color-coded) water quality tests via UNIHIKER (NVIDIA TAO RetinaNet) simultaneously.,1
 [D] help with oriented object detection,0
 To me this proves AI is going to be invaluable in future legal applications. Because it draws from many sources and puts everything together way more concise than a human can.,0
@@ -176,7 +176,7 @@ Need help automating customer feedback analysis using AI,0
 [Research] xLSTM: Extended Long Short-Term Memory,1
 Time Series Forecasting (GPT4-Turbo) 👾✨,0
 Gemini catching up ChatGPT?,0
-Favorite metric spaces?,0
+Favorite metric spaces?,1
 Not graduating due to not knowing how to do Financial Math,0
 Is there a way to replace one word in a song?,0
 Finding out your research actually isn’t new,0
@@ -194,15 +194,15 @@ How can I enhance the resolution of text in a super low-resolution image to make
 The Geometric Langlands Conjecture -- Sam Raskin @ IAS,1
 Help! False Positive AI Detection.,0
 Shooting victims are ‘calling’ members of Congress. Is it OK to use AI to clone your child’s voice to deliver a political message?,0
-[D] PEFT techniques actually used in the industry,0
+[D] PEFT techniques actually used in the industry,1
 [D] weighted pruning question,0
-Apple AI Chips Revolutionize Datacenter Operations,0
+Apple AI Chips Revolutionize Datacenter Operations,1
 Turning Back The Clock: Genetic Engineers Rewire Cells For An 82% Increase In Lifespan,1
 A Trampoline Competition,0
 Microsoft and OpenAI Start $2M Fund to Fight Election Deepfakes,0
 Ollama inference on Kaggle / Google Colab with API access,0
 AI Code Generation: Evolution and Impact on Development,0
-Understanding AI: The Rise of Explainable AI,0
+Understanding AI: The Rise of Explainable AI,1
 Anyone here tried both non-pro motion display and pro motion display on the IPad?,0
 Llama 2: Powering the Future of Language,1
 Math roadmap?,0
@@ -219,7 +219,7 @@ Ai reddit radio/summary/podcast,0
 Is the progress of math linear? Where is it going?,0
 [Discussion] Seeking Advice: Best Open-Source Tools for Automating Data Processing in Commercial Auto Insurance?,0
 Expert GPT4-Turbo 👾✨,0
-Distance Estimation in Real world Coordinates,0
+Distance Estimation in Real world Coordinates,1
 [D] Fun little discovery: Gemini is surprisingly bad at following simple number sequences,0
 [D] Strange Loss Curve while training,0
 Could AI assist in arrests related to illegal activities on the tor network?,0
@@ -746,3 +746,258 @@ Tensor type of tensor build on tensor product of modules of different dimension,
 Hardy Spaces and related topics.,1
 John Lee's Complex Manifolds book just dropped,1
 Is Artificial Intelligence (AI) in general good or bad for the world?,0
+Question about polyhedra,1
+[R] Building an Observable arXiv RAG Chatbot with LangChain Chainlit and Literal AI,1
+Proving humanness in the age of AI: a technical deep dive into World ID,1
+[R] Pretraining a byte-level 0.67B transformer on a single A100,0
+What’s the best prompt writing prompt?,0
+Google launches Project Astra to compete with OpenAI's GPT-4o,1
+AI firm trust,0
+[R] Integrating AI into search engines: How Yandex is making more sophisticated use of AI,0
+DATA PREPROCESSING OF PDF BOOKS [Project] [Research],1
+[D] Computer Vision Tooling - Multistage data processing,1
+The Easiest Way of Running Llama 3 Locally,0
+The Era of 1.58-Bit Large Language Models,0
+That which that irks me when learning math,0
+I’m fed up,0
+[D] Apriori Algorithm,1
+Chat Smarter: Automate WhatsApp Replies with ChatGPT,0
+Discover the essential languages for crafting intelligent systems,1
+Publishing Your AI App on the Web,0
+Are there any ai that can post comments,0
+Building Multimodal Apps with GPT-4O,0
+XGen-MM: A Series of Large Multimodal Models (LMMS) Developed by Salesforce Al Research,1
+[D] What steps need to follow from Marketing Product Manager to Data Product Manager,0
+[D] We are forming a study group!,0
+[D] Confusion: What does the y-axis of calibration curves represent?,1
+SambaNova Systems Enhances Modular AI Deployment through Composition of Experts on the SambaNova SN40L Platform,1
+[R] Fully neuromorphic vision and control for autonomous drone flight,1
+Straight angles are driving me up a wall,0
+Nanogpt alternative [D],0
+reconciling proof ability with programming ability,0
+Beyond complex numbers,0
+[D] What's up with papers without code?,0
+[P] jaxsplat: 3D Gaussian Splatting for JAX,1
+AI speaking of Incidents that never occurred.,0
+Using AI to modify excel documents not possible yet?,0
+Build a super fast AI assistants with Groq,0
+Creating proxy server for llms,1
+Robots will come after humanbots.,0
+Tips for improving my VAE [Project],0
+Anxiety due to AI and it's rapid growth rate.,0
+Russian-language books at the layman/introduction level?,1
+Cloned New Zealand Accent Lands on ElevenLabs' Homepage Within a Week!,0
+I can see AI genuinely amending or even curing the male loneliness epidemic relatively soon,0
+What's the best state of the art workflow for using LLMs to understand long-length video? Can you make Gemini Pro 1.5 with the newly expanded context window do this?,0
+Fun Advanced Mathematics Book Recommendations.,1
+Does every TTS tool need reference voice along with model to run ? [D],0
+Database for bounds improvements and special cases for a conjecture,1
+US Senators unveil 'roadmap' for government-funded AI research regulation,0
+Would the person who solves the Yang Mills mass gap problem win both a fields medal and a nobel prize in physics?,1
+A Daily chronicle of AI Innovations May 15 2024: 🤖Google unveiled the future of AI @ I/O event 🧪OpenAI chief scientist Ilya Sutskever is leaving ✨Google announced a wide array of updates across its AI ecosystem 🧠Google’s Gemini updates and Sora competitor 🔎Google’s AI agent & AI search upgrades,1
+Ai tools to reduce time needed for editing and cutting down long-form videos?,0
+Mistral API Front-end RP and chat with plugins?,0
+I'm confused about Gemini's pricing,0
+I have always understood maths and geometry really well but all of a sudden I can't seem to understand it,0
+Lifelong learning for A.I.,0
+If you had the chance to ask Michael Dell anything what would you ask?,0
+Genetic Algorithm fitness function testing.,1
+Inequality,0
+The fears of AI. If AGI/ASI was smart enough to realize that we are a disease on the planet and decided to cleanse it wouldn’t it also be smart enough to realize that ultimately it’s the minority in world governments that are doing 99% of the bad?,0
+The Origins of Inner Products and the Term "Orthogonal Functions",1
+How has AI changed the life of salespeople?,0
+[D] ACL 2024 Decisions,1
+[Discussion] Are there any LLM model or approach that answers questions by fetching latest information from internet?,0
+How will proliferation of math impact education?,0
+We already had Web 1 2 and 3. But how would web4 look like?,0
+Developing an AI Assistant for Creating Construction Estimates,0
+[P] New KANs paper just dropped: Kolmogorov-Arnold Networks (KANs) for Time Series Analysis,1
+AI in soccer (football),0
+Why is the number of real roots of a polynomial on average proportional to the log of its degree?,0
+Why is the number of real roots of a polynomial on average proportional to the log of its degree?,1
+POC: an automated method for detecting fake accounts on social networks,0
+[D] A possible solution for the surging submissions in AI/ML top confs,1
+Any sfx generator with an api,0
+Trying to understand the tangent space of a Lie Group (smooth manifold) based on an example,1
+[D] Audio Tokenizers,0
+Decoding Complexity with Transformers: Researchers from Anthropic Propose a Novel Mathematical Framework for Simplifying Transformer Models,1
+[R] Suggestions for SpringerNature journal for ML paper,1
+Hilbert seems like a very nice guy from what I know.Was he really? What are some nice stories about him?,0
+Should I attend the next Fibonacci conference? It's as good as the previous two combined.,0
+Auto Data Analysis python packages demo,1
+Can someone with access to AI outperform a person with years of experience?,0
+[P] Looking For Beginner Level ML Project Team Member!,0
+How AI businesses are the next big thing,0
+Earth 2.0 Simulation Parameters,1
+Thoughts about "AI-God",0
+Math in cybersecurity,1
+Demystifying AI Jargon: NLP vs. LLMs,0
+NLTK vs. spaCy: Research vs. Development,1
+[R] Replace the object in the frame with a similar object,0
+This week in ML & data science (11.5.-17.5.2024),1
+MIT Researchers Remotely Map Food Crops Using Machine Learning And Satellites,0
+A model that can understand flowcharts,0
+What are pros and cons when you compare Bland AI Retell and Vapi Voice Bot?,0
+[D] Correct interpretation of Model.predict output.,0
+What is a good reference for Morse theory and handle decompositions in Smale's sense?,1
+[P] Real Time Emotion Classification with FER-2013 dataset,1
+AI "Brain" Diagrams,0
+mismatch between past key values calculated from scratch and past key values obtained from the model [D],0
+Why is weak* compactness given more importance than weak compactness?,1
+Which math facts feel right / wrong / suspicious / anything else in particular to you?,0
+Tired of MMLU? The current models already hit the ceiling? It's time to upgrade MMLU! ----- TIGER-Lab Introduces MMLU-Pro Dataset for Comprehensive Benchmarking of Large Language Models’ Capabilities and Performance,1
+What is the relationship between NP-completeness and search algorithms?,1
+I am considering a PhD in math but I have really weak powers of visualization: what fields do not rely heavily on visualization?,0
+How can I use AI for work?,0
+Local LLM Services,0
+Which AI subscriptions do you have after the latest releases?,0
+[D] Real chances to be accepted in NeurIPS 2024 - Other conferences,1
+MLB sports model,0
+Build your own AI Video editor with Node.js AssemblyAI & StreamPot,0
+Thoughts on "Leela" from the book "Theft of Fire",1
+My mum looks at fake photos and thinks they’re real,0
+[D] Seminal papers list since 2018 that will be considered cannon in the future,1
+Is this curriculum unusually focused in algebra/geometry? If so why do you think that might be?,0
+[D] Are PyTorch high-level frameworks worth using?,0
+Any good recommendations for online Calculus III Course,0
+Feeling limited by Notion,0
+Interesting question... do we know how this might go down?,0
+What do you 'see' when you do math in your head?,0
+Any recommendations of free online practice questions?,0
+OpenAI and Reddit Partnership: Why?,0
+I disliked math throughout school/college but now I have a whole new perspective on it.,0
+Why are Apple and Amazon not going all in on AI,0
+Hey guys! I just discovered an easy fix for face morphing/warping in Runway ML generations,0
+How will AI change storytelling in games? Writers for hit games including Deus Ex give me very nuanced takes.,1
+What’s the best AI app for casual use/fun?,0
+If the proportions in Archimedes' cattle problem were different could the second half not have a solution?,1
+I created an open-source AI trading algorithm and released it on GitHub,1
+Spectral theory,1
+What are some ways artificial intelligence might help people with average or less intelligence?,0
+AGI debate simplified (1 vs 2),0
+Cayley Graphs in Computer Science,1
+A Daily chronicle of AI Innovations May 16th 2024: 🤔 Microsoft’s AI ambitions lead to 30% rise in emissions🪫 Stability AI reportedly runs out of money and in negotiations to sell 🍎Apple unveils AI-enhanced eye tracking music haptics voice shortcuts and more,1
+AI's Influence on US Elections in 2024 - verbal feedback request (QR Code),0
+Is there a way to graph down the inverse table (from 1 to 100 in row and column)?,0
+Guestures Smart Cameras And Onward To Smart Matter,1
+LangChain vs LlamaIndex (Generative AI packages),1
+Where can I find more information on convolution of a given function with a Hankel function ?,1
+Career and Education Questions: May 16 2024,0
+[D] Friday's Oxen.AI Water Cooler call: High-performance audio processing Python vs Rust,0
+[R] Energy-based Hopfield Boosting for Out-of-Distribution Detection,1
+Trig ratios in music?,0
+Are there any mathematicians here who did NOT like school?,0
+nth Root of x balancing The Factorizations of x with n Terms,0
+[D] Running large models on Mac for prototype/finetune,0
+[D] LWhy are Linear RNNs so performant (in terms of accuracy not compute)? Looking for mathematical or even intuitive explanations,1
+What would be the least number of moves to determine if a game is winnable or non-winnable in Solitaire ?,0
+[D] ICML 2024 travel grants?,0
+Fidget Spinner Cowboy (AI MUSIC),0
+Our future with AI,0
+Farfalle: Open-source answer engine,1
+Has anyone changed their mind about any life decisions because of AI?,0
+**"Seeking Advice: Should I Pursue Another Master's in AI or Invest in Hands-On Projects?"**,0
+What concepts from existing math did Newton reuse (get inspiration) to invent Calculus?,1
+Blainy: Your $10 Monthly AI Writing Tool Solution!,0
+[D] Unveiling MileBench: Benchmarking MLLMs in Long Contexts!,1
+Automatically generating summaries and insights with local hosted AI,0
+[D] Neurips checklist Questions,1
+[D] What’s the best cloud compute service for hobby projects?,0
+[D] RAG app not able to answer question with Full Context Need Help!!!!,0
+Looking for AI websites to fix puzzles,0
+Are you really leveraging AI or just following the buzz?,0
+[P] Needle in a Needlestack (NIAN),1
+[D] Neural Operators | DeepONet vs. FNO |,1
+Proving humanness in the age of AI: a technical deep dive into World ID,0
+Best books on analysis?,1
+AI firm trust,0
+DATA PREPROCESSING OF PDF BOOKS [Project] [Research],0
+Highly Counterintuitive Mathematical Results,0
+I have to agree.,0
+Seeking Career Advice,0
+[Project] Can’t seem to find good datasets or API’s with European Flight information to create ML model,0
+[P] Blat AI generates scrapers on-the-fly using LLMs and download the entire code to run it locally,1
+How does AI create new opportunities for devs?,0
+[P] Multivariate Traffic Flow Predictions,1
+Self-prompting (system prompt),1
+how many hours per day should I spend studying math?,0
+Having difficulty with this one,0
+Did Stack Overflow just admit defeat to AI?,0
+Buying a used or new car.,0
+Google announced groundbreaking new AI technology at Google IO. The 10 most incredible examples:,1
+[D] Research on diffusion models with focus on efficiency and reducing computation cost,1
+Situation recognition for elderly people via video feed and AI,0
+[Discussion] What are SOTA Uncertainty Quantification Methods for Neural Networks?,1
+[R]How to learn GenAi from scratch?,0
+[R] LLM4ED: Large Language Models for Automatic Equation Discovery,1
+Need advice,0
+[R] The Platonic Representation Hypothesis,1
+String theory. Still a viable theory?,0
+Diagonizable Matrix,0
+Does the integral with respect to d^2 x make any mathematical sense?,0
+[Project] Please help me get good repositories for instance segmentation of images?,0
+What's digit 'switchability' in addition called?,0
+Compiling lists/charts off info from the internet,0
+Book recommendation - Similar to „Love and Math“,1
+xAI in talks to pay Oracle $10 billion to rent their AI servers,0
+Which Linear Algebra textbook would be suitable for a complete beginner? Reading FAQs has made me more confused,0
+[P] Tips on training a Transformer model,0
+past key values from hidden states [D],0
+How to transition to prove based classes like Real Analysis,0
+[D] Video analysis tools for detecting cheating in interviews,0
+AI hype balloon started deflating?,0
+OpenAI Startup Fund raises $5 million more,0
+Training a 2gb of image dataset on Colab [D],0
+Is there an AI that automatically creates macros for you and suggests keybinds for them? Would this be easy to build?,0
+Stop Credit Card Thieves in Their Tracks: AI Saves the Day,0
+Introducing LiteLLM: Your Universal Remote for Large Language Models,1
+[D] Those in the industry how are you using open source LLMs?,0
+I'm looking for a good free ai tool for pictures,0
+This AI Paper by Snowflake Introduces Arctic-Embed: Enhancing Text Retrieval with Optimized Embedding Models,1
+Help with Flower of Life construction but with spheres.,1
+Generate real-looking AI models and influencers,0
+Is there an AI that automatically creates macros for you and suggests keybinds for them?,0
+Questions from a Newcomer in Medicine,0
+Using statistics to uncover fraud,0
+Strangely Curved Shapes Break 50-Year-Old Geometry Conjecture | Quanta Magazine - Jordana Cepelewicz | Mathematicians have disproved a major conjecture about the relationship between curvature and shape,1
+which company do you trust the most [with regard to A.l.]?,0
+"Colombeau Algebra: A pedagogical introduction" good stuff?,1
+Why does DALL-E suck so much and why doesn’t openAI improve it at all?,0
+[R] Matryoshka representation learning (MRL) for CLIP (& SigLip),1
+A Summation With No Closed Rational Formula: The Harmonic Numbers and Asymptotic Analysis,0
+Ocean memes are ai products.,0
+AIs Interacting with One Another!,0
+[D] Any reason not to submit to NeurIPS?,0
+A Daily chronicle of AI Innovations May 14th 2024: 🚀 GPT-4o: 2x faster 50% cheaper 5x rate limits than GPT-4 Turbo 🗣️ OpenAI unveils GPT-4o and new voice capabilities 🔍 TikTok tests ChatGPT-powered search results 🎧 Meta explores AI-assisted earphones with built-in cameras,1
+Is “Omnimodel“ just marketing speak for “multimodal“ or is it substantially different?,1
+Suggestions on AI bootcamps given my approach,0
+Where should I go next?,0
+Artificial Intelligence is Already More Creative than 99% of People,0
+Rate of convergence of Fibonnacci Machin-Like Formula,0
+AI Product Manager / Product Team,0
+Are openAI and Google according their agenda ?,0
+[D] Optical Flow For Video Classification,1
+Importance of knowing the math behind neural networks?,0
+[Discussion] event sequence ORDER prediction,0
+[D] LightZero custom environment,1
+Top US and Chinese officials begin talks on AI in Geneva,0
+Google finally figured out the messaging on generative images/video/music: Focus on the PERSON and creative expression that they envision- then focus on how they use GenAI as a PART of their workflow toward achieving that expression. - Ft. Wyclef Jean Marc Rebillet Childish Gambino/Donald Glover,0
+I'm looking to use AI to improve my motivation. Maybe a chatbot that checks in with me about whether I've completed my work?,0
+[D] Kolmogorov Arnold Networks: A visual paper breakdown (Video),1
+What is the weirdest story,0
+[D] GPT-4o "natively" multi-modal what does this actually mean?,0
+Rock-Paper-Scissors Simulator and Lotka-Volterra,0
+Google I/O is putting me to sleep,0
+what's your biggest hiccup/difficulty while writing a maths paper?,0
+[D] Which macbook for machine learning/bayesian statistics,0
+questions about euler in growth equations,0
+OpenAi is going launch a google search rival!!,0
+Will AI Surpass Human Intelligence and When?,0
+Is it true that there are phd programs (in the US) less likely to accept applicants with a masters?,0
+[D] Is BERT still relevant in 2024 for an EMNLP submission?,1
+Join Our Beta: Unify ChatGPT Gemini Claude & Mistral in One Web App. Seeking Beta Users for AI Client,0
+Nice places (fields or books) to look for “recreational maths”,0
+I've built a website to present new arxiv math submissions!,1
+Proof and generalisation of Formula for Euler character using 2 dimensional Ricci Tensor,1
+Math Research in HS for ISEF?,0
+Big tech are headed in the wrong direction,0
